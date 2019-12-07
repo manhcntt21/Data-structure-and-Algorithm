@@ -1,0 +1,54 @@
+<html>
+<body>
+<h3>Some Ways to Share Code with your project partner</h3>
+
+Here are three different ways to "transfer" code between you 
+and your partner's accounts:
+<ol>
+<li> runing a browser on our system, email your file to your
+partner as an attachment.  Your partner can run a browser from
+his/her CS account and save the file, then move it into the correct
+subdirectory using the mv command:
+<pre>
+mv workersDB.c ~/cs31/labs/01/.
+</pre>
+<p>
+<li>or, using scp (secure copy) to copy a file to/from your account
+from/to your partner's.  For example, to copy your workersDB.c
+file to your partner's cs31/labs/01/workersDB_1.c file:
+<pre>
+cd cs31/labs/01/
+scp workersDB.c partners_username@lab:/cs31/labs/01/workersDB_1.c
+# scp will promt your partner to enter his/her password before doing the copy
+</pre>
+As in the example above, I recommend naming the destination file
+something other than workersDB.c so as not to overwrite
+your partner's version of workersDB.c, potentially losing his/her changes.
+Your partner can then decide whether or not to replace their
+version with yours using the mv command:
+<pre>
+mv workersDB_1.c workersDB.c
+</pre>
+<li> or, have your partner ssh into a lab machine from a terminal
+on the machine you are logged into, open both files in vim and 
+use the mouse to cut and paste all or some of the contents from one 
+file to another. 
+</ol>
+If you cut and paste code (either as above or between two of your
+own files), the formatting can get really messed up.  You can either
+avoid this by doing the following in command-mode before pasting to
+stop vim from auto-indenting:
+<pre>
+:set paste
+</pre>
+and  this turns paste-mode off
+<pre>
+:set no paste
+</pre>
+or, you can re-format the pasted code by moving the cursor to the
+first line you want to reformat, visually select it and select to the
+end of the file and then do = to reformat (SHIFT-V, SHIFT-G, =)
+
+</body>
+</html>
+

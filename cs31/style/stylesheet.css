@@ -1,0 +1,152 @@
+/*------------------------------------------------------------------------------
+ * stylesheet.css - stylesheet for Andrew Danner's Web Site
+ *
+ * Modified from David Finlayson (U. Washington) site
+ *-----------------------------------------------------------------------------*/
+
+body {
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: small;
+	color: #323232;
+	background: #c6cfdc;
+  margin: 0;
+  padding: 0;
+  border: 0;
+}
+
+tt {
+  font-weight: bold;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+pre#code {
+  font-weight: bold;
+  font-family: Andale Mono, MS Courier New, monospace;
+}
+
+.code {
+  font-weight: bold;
+  font-family: Andale Mono, MS Courier New, monospace;
+}
+
+.code .orange { color: orange; }
+.code .red { color: red; }
+.code .green { color: green; }
+.code .blue { color: blue; }
+.code .purple { color: purple; }
+
+
+p { margin: 0; border: 0; }
+
+div#Wrapper {
+  width: 750px;
+  background: #ffffff;
+	line-height: 2.75ex;
+  padding: 0;
+  border: 0;
+  margin-left:auto;
+  margin-right:auto;
+
+}
+
+h1 {
+	font-weight: normal;
+	font-size: 2.5em;
+	color: #003366;
+	line-height: 1.5ex;
+	margin: 0ex 0em 1ex 0em;
+}
+
+h2 {
+	font-weight: normal;
+	font-size: 2.0em;
+	color: #003366;
+	margin: 1ex 0em 1ex 0em;
+}
+
+a{
+  text-decoration: none;
+  font-weight: bold;
+}
+
+a:link    {color: #003366;}
+a:visited {color: #003366;}
+a:hover   {text-decoration: underline;}
+
+
+
+#HeaderLarge{
+   font-size: 1.1em;
+   line-height: 1.2em;
+   margin: 5ex 2em 3ex 3em;
+}
+
+
+#HeadImgMed {
+  background: url(images/alaska_med.jpg) 0 0 no-repeat scroll;
+  border:0;
+  margin:0;
+  width:100%;
+}
+
+#HeadImgSm{
+	background: url(images/alaska_small.jpg) 0 0 no-repeat scroll;
+  padding:0;
+  margin:0;
+  width:100%;
+}
+
+#HeaderSmall{
+   font-size: 1.1em;
+   line-height: 1.2em;
+   margin: 0ex 1em 0ex 1em;
+   padding: 1ex 1em 1ex 1em;
+   border:0;
+   width:100%;
+}
+
+#TagLine {
+	font-size: 1.2em;
+	font-style: italic;
+	background-color:#eee;
+  margin: .5ex 0em .5ex 0em;
+  padding: .5ex 0em .5ex 2em;
+  border-width: 1px 0px;
+	border-color: black;
+	border-style: solid;
+	clear: left;
+}
+
+#Content {
+	margin: 0ex 1em 0ex 1em;
+	padding: 1ex 1em 1ex 1em;
+}
+
+#Content p {
+   margin: 2ex 0em 0ex 0em;
+}
+
+#Footer {
+	background-color: #eee;
+	text-align: center;
+	font-size: 0.8em;
+   margin: 2ex 0em 2ex 0em;
+   padding: 1ex 0em 1ex 0em;
+	border-width: 1px 0px;
+	border-color: black;
+	border-style: solid;
+}
+
+#Footer img {
+   clear: left;
+   height: 31px;
+   width: 88px;
+   border: none;
+}
+
+div.center {
+  text-align: center;
+  font-size: 0.9em;
+  padding: 2ex 2em 2ex 2em;
+}
+
