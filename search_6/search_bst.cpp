@@ -58,7 +58,7 @@ int binary_search_(int *a, int lower, int upper, int value_target) {
     logn
 */
 
-//    printf("\n%d %d\n", lower, upper);
+   printf("\n%d %d\n", lower, upper);
     if( lower > upper) {
         return -1;
     }
@@ -323,16 +323,18 @@ void delete_bst_result(node *root, int value) {
 
 
 int main() {
-/**
-    int a[MAX] = {20,4,1,3,2,16,9,10,14,8,7};
-    int size_ = 10;
-    inserttion_sort(a,size_);
-    print(a,size_);
-    int value_target = 16;
-    printf("%d\n", binary_search_(a,size_,value_target));
+///**
+    // int a[MAX] = {20,4,1,3,2,16,9,10,14,8,7};
+    int a[MAX] = {1,2,3,4,5,6,7,8};
+    int size_ = 7;
+    // inserttion_sort(a,size_);
+    // print(a,size_);
+    int value_target = -10;
+    // printf("%d\n", binary_search_(a,size_,value_target));
     // recursive
+    // binary_search_(a,0,size_,value_target);
     printf("%d", binary_search_(a,0,size_,value_target));
-*/
+//*/
 
 /**
     node *root = create_tree();

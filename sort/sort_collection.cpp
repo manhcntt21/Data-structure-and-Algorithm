@@ -61,18 +61,18 @@ int quicksort(int *a, int left, int right) {
 // merge sort
 
 void merge_(int *a,int left, int mid, int right) {
-	int length = right - left + 1;
-	int tmp[right+1];
-	int i = left; // dau cua nua trai
-	int j = mid + 1; // dau cua nua phai;
-	for(int k = left ; k <= right ;k++) {
-		if(i > mid) {
-			tmp[k] = a[j];
-			j++;
-		} else if(j > right) {
-			tmp[k] = a[i];
-			i++;
-		} else {
+    int length = right - left + 1;
+    int tmp[right+1];
+    int i = left; // dau cua nua trai
+    int j = mid + 1; // dau cua nua phai;
+    for(int k = left ; k <= right ;k++) {
+        if(i > mid) {
+            tmp[k] = a[j];
+            j++;
+        } else if(j > right) {
+            tmp[k] = a[i];
+            i++;
+        } else {
                 if(a[i] < a[j]) {
                 tmp[k] = a[i];
                 i++;
@@ -80,23 +80,23 @@ void merge_(int *a,int left, int mid, int right) {
                 tmp[k] = a[j];
                 j++;
             }
-		}
-	}
-	for (int k = left; k <= right; k++)
-	{
-		a[k] = tmp[k];
-	}
+        }
+    }
+    for (int k = left; k <= right; k++)
+    {
+        a[k] = tmp[k];
+    }
 
 }
 
 void merge_sort(int *a,int left, int right) {
-	if( left < right) {
-		int mid = (left + right)/2;
-		merge_sort(a,left,mid);
-		merge_sort(a,mid+1,right);
-		merge_(a,left,mid,right);
-	}
-	print(a,left,right);
+    if( left < right) {
+        int mid = (left + right)/2;
+        merge_sort(a,left,mid);
+        merge_sort(a,mid+1,right);
+        merge_(a,left,mid,right);
+    }
+    print(a,left,right);
 }
 
 void print(int *a, int array_size) {
@@ -221,8 +221,9 @@ void min_heapify(int *a, int i, int heap_size) {
     }
 
 }
-
-int length_A = 3; // la kich thuoc that cua heap, khong chua phan tu a[0] = 0 mac dinh
+// neu chay bang mang thi phai set = 10
+// neu chay bang hang doi thi set bang 3
+int length_A = 10; // la kich thuoc that cua heap, khong chua phan tu a[0] = 0 mac dinh
 /*
     khoi phuc tinh chat dong cua ca cay O(logn)
 */
@@ -306,7 +307,7 @@ int extract_max_priority_queue(int *a) {
 */
 void increase_key(int *a,int x, int key) {
     // voi truong hop max
-    if( key < x) {
+    if( key < a[x]) {
         printf("khoa moi nho hon khoa hien tai\n");
 
     } else {
@@ -324,39 +325,39 @@ int main() {
 //    merge_sort(a,0,array_size-1);
 //    quicksort(a,0,array_size-1);
 
-//    int A[MAX] = {0,4,1,3,2,16,9,10,14,8,7};
-//    print(A,length_A + 1); // do bao gom phan tu dau tien  = 0
-//    shuffle(A,length_A + 1);
-//    print(A,length_A + 1);
-//    heap_sort(A);
-//    print(A,length_A+1);
+    int A[MAX] = {0,4,1,3,2,16,9,10,14,8,7};
+    print(A,length_A + 1); // do bao gom phan tu dau tien  = 0
+    shuffle(A,length_A + 1);
+    print(A,length_A + 1);
+    heap_sort(A);
+    print(A,length_A+1);
 
-    int a[MAX];
-    a[0] = 0;
-    a[1] = 10;
-    a[2]  = 7;
-    a[3] = 9;
-    print(a,length_A+1);
-    insert_element_queue_priority(a,15);
-    print(a,length_A+1);
-    printf("phan tu lon nhat trong hang doi uu tien %d\n", max_priority_queue(a));
-    extract_max_priority_queue(a);
-    print(a,length_A+1);
-    extract_max_priority_queue(a);
-    print(a,length_A+1);
-    extract_max_priority_queue(a);
-    print(a,length_A+1);
-    extract_max_priority_queue(a);
-    print(a,length_A+1);
-    extract_max_priority_queue(a);
-
-    insert_element_queue_priority(a,10);
-    insert_element_queue_priority(a,7);
-    insert_element_queue_priority(a,9);
-    insert_element_queue_priority(a,15);
-    print(a,length_A+1);
-    increase_key(a,4,50);
-    print(a,length_A+1);
+//    int a[MAX];
+//    a[0] = 0;
+//    a[1] = 10;
+//    a[2]  = 7;
+//    a[3] = 9;
+//    print(a,length_A+1);
+//    insert_element_queue_priority(a,15);
+//    print(a,length_A+1);
+//    printf("phan tu lon nhat trong hang doi uu tien %d\n", max_priority_queue(a));
+//    extract_max_priority_queue(a);
+//    print(a,length_A+1);
+//    extract_max_priority_queue(a);
+//    print(a,length_A+1);
+//    extract_max_priority_queue(a);
+//    print(a,length_A+1);
+//    extract_max_priority_queue(a);
+//    print(a,length_A+1);
+//    extract_max_priority_queue(a);
+//
+//    insert_element_queue_priority(a,10);
+//    insert_element_queue_priority(a,7);
+//    insert_element_queue_priority(a,9);
+//    insert_element_queue_priority(a,15);
+//    print(a,length_A+1);
+//    increase_key(a,4,50);
+//    print(a,length_A+1);
 
     return 0;
 }
